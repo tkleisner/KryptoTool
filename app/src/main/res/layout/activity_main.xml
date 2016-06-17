@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background_encryption"
+    tools:context="com.example.tom.kryptotool3000.MainActivity"
+    android:weightSum="1">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="OTEVŘENÝ TEXT"
+         />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="5pt"
+        android:lines="4"
+        android:id="@+id/plainText"
+        android:layout_weight="0.40"
+        android:background="#b7295485"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Šifrovat"
+        android:id="@+id/button"
+        android:layout_marginBottom="20px"
+        android:background="#ed6a0000"
+        android:onClick="viewEncrypt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="ŠIFROVANÝ TEXT"
+     />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="5pt"
+        android:lines="4"
+        android:id="@+id/cipherText"
+        android:layout_weight="0.40"
+        android:background="#b7295485"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Dešifrovat"
+        android:id="@+id/button2"
+        android:layout_marginBottom="20px"
+        android:background="#ed6a0000"
+        android:onClick="viewDecrypt" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="KLÍČ"
+            android:id="@+id/textView" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/keyText"
+            android:background="#b7295485"
+            android:layout_marginLeft="10px"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:onClick="viewEncrypt" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Not selected"
+        android:id="@+id/buttonSwitch"
+        android:layout_marginTop="20px"
+        android:background="#929e00"
+        android:layout_gravity="center_horizontal"
+        android:onClick="changeCipher" />
+
+</LinearLayout>
