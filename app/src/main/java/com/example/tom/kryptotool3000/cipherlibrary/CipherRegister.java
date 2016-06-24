@@ -16,6 +16,7 @@ public class CipherRegister {
         cipherList.add(new CaesarCipher());
         cipherList.add(new VigenereCipher());
         cipherList.add(new TranspositionCipher());
+        cipherList.add(new ReverseCipher());
 
         return cipherList;
     }
