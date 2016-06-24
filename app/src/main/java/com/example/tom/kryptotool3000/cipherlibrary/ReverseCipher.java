@@ -9,6 +9,8 @@ public class ReverseCipher implements ICipher {
         return "Bombora";
     }
 
+    public boolean validateKey(String key) { return true; }
+
     @Override
     public String encrypt(String text, String key) {
         return new StringBuilder(text).reverse().toString();

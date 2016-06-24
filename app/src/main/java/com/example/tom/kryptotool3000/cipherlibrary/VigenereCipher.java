@@ -9,6 +9,21 @@ public class VigenereCipher implements ICipher {
         return "Weissental";
     }
 
+    public boolean validateKey(String key)
+    {
+        // klicem muze byt libovolne slovo slozene pouze z pismen anglicke abecedy
+
+        if (key.length() == 0)
+            return false;
+
+        key = key.toUpperCase().replace(" ", "");
+        for (int i = 0; i < key.length(); i++)
+        {
+            if (key.charAt(i) < 'A' || key.charAt(i) > 'Z')
+                return false;
+        }
+        return true;
+    }
 
     public String encrypt(String text, String key) {
         String res = "";

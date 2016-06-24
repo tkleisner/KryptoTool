@@ -17,6 +17,8 @@ public class AtbasCipher implements ICipher {
         return atbas(text);
     }
 
+    public boolean validateKey(String key) { return true; }
+
     private String atbas(String text) {
         char[] chars = text.replace(" ", "").toLowerCase().toCharArray();
 

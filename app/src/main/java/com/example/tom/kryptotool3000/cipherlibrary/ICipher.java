@@ -13,4 +13,11 @@ public interface ICipher {
     String encrypt(String text, String key);
 
     String decrypt(String text, String key);
+
+    /**
+     * Validace klice
+     * @param key
+     * @return true = v poradku, false = chybny klic
+     */
+    boolean validateKey(String key);
 }

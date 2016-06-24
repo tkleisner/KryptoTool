@@ -10,6 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/background_encryption"
     tools:context="com.example.tom.kryptotool3000.MainActivity"
+    android:keepScreenOn="true"
     android:weightSum="1">
 
 
@@ -22,10 +23,11 @@
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="5pt"
+        android:textSize="7pt"
         android:lines="4"
         android:id="@+id/plainText"
-        android:layout_weight="0.40"
+        android:inputType="textMultiLine"
+        android:layout_weight="0.30"
         android:background="#b7295485"
         android:textColor="#ffffff" />
 
@@ -47,10 +49,11 @@
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="5pt"
+        android:textSize="7pt"
         android:lines="4"
         android:id="@+id/cipherText"
-        android:layout_weight="0.40"
+        android:inputType="textMultiLine"
+        android:layout_weight="0.30"
         android:background="#b7295485"
         android:textColor="#ffffff" />
 
@@ -80,10 +83,13 @@
             android:layout_height="wrap_content"
             android:id="@+id/keyText"
             android:background="#b7295485"
+            android:textSize="7pt"
             android:layout_marginLeft="10px"
+            android:imeOptions="actionDone"
             android:layout_weight="1"
             android:textColor="#ffffff"
-            android:onClick="viewEncrypt" />
+            android:inputType="text"
+            android:padding="2dp" />
     </LinearLayout>
 
     <Button

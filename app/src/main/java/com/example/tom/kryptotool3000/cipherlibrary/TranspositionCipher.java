@@ -7,7 +7,22 @@ import java.util.Arrays;
  */
 public class TranspositionCipher implements ICipher {
     public String getName() {
-        return "Trpaslici";
+        return "Trpasličí";
+    }
+
+    public boolean validateKey(String key)
+    {
+        // klicem muze byt libovolna posloupnost cisel od 1 do 9
+
+        if (key.length() == 0)
+            return false;
+
+        for (int i = 0; i < key.length(); i++)
+        {
+            if (key.charAt(i) < '1' || key.charAt(i) > '9')
+                return false;
+        }
+        return true;
     }
 
     public String encrypt(String text, String key) {

@@ -9,6 +9,21 @@ public class CaesarCipher implements ICipher {
         return "De Fleurs";
     }
 
+    public boolean validateKey(String key)
+    {
+        // klicem muze byt libovolne cele kladne cislo (ac ma smysl pouze 0-26)
+
+        if (key.length() == 0)
+            return false;
+
+        for (int i = 0; i < key.length(); i++)
+        {
+            if (key.charAt(i) < '0' || key.charAt(i) > '9')
+                return false;
+        }
+        return true;
+    }
+
     public String encrypt(String text, String key) {
         int shift = 0;
 
