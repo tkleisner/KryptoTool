@@ -6,7 +6,7 @@ package com.example.tom.kryptotool3000.cipherlibrary;
 public class CaesarCipher implements ICipher {
 
     public String getName() {
-        return "Cesar";
+        return "De Fleurs";
     }
 
     public String encrypt(String text, String key) {

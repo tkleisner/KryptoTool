@@ -14,7 +14,8 @@ public class CipherRegister {
     public static List<ICipher> getCipherList() {
         cipherList.add(new AtbasCipher());
         cipherList.add(new CaesarCipher());
-        //cipherList.add(new NejakaNovaUzasnaSifra());
+        cipherList.add(new VigenereCipher());
+        cipherList.add(new TranspositionCipher());
 
         return cipherList;
     }

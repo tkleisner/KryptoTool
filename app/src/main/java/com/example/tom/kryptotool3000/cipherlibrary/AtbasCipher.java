@@ -6,7 +6,7 @@ package com.example.tom.kryptotool3000.cipherlibrary;
 public class AtbasCipher implements ICipher {
 
     public String getName() {
-        return "Atbas";
+        return "Blackhill";
     }
 
     public String encrypt(String text, String key) {
